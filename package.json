@@ -1,0 +1,21 @@
+{
+    "name": "proyecto-apuesta",
+    "version": "1.0.0",
+    "description": "Sistema de Apuestas MVC",
+    "main": "App.js",
+    "scripts": {
+        "start": "node App.js",
+        "dev": "nodemon App.js"
+    },
+    "author": "Alumno Tecnicatura en Programacion",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "msnodesqlv8": "^5.2.0",
+        "mssql": "^11.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}

@@ -1,0 +1,262 @@
+/* ========================================== */
+/* RESET */
+/* ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================== */
+/* BODY */
+/* ========================================== */
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f4f4;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================== */
+/* HEADER */
+/* ========================================== */
+
+.header {
+    background-color: #1f2937;
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.header__titulo {
+    font-size: 28px;
+}
+
+/* ========================================== */
+/* CONTENIDO */
+/* ========================================== */
+
+.contenido {
+    flex: 1;
+
+    padding: 20px;
+}
+
+/* ========================================== */
+/* CONTENEDOR APUESTAS */
+/* ========================================== */
+
+.apuestas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ========================================== */
+/* CARD */
+/* ========================================== */
+
+.card {
+    width: 400px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card > :last-child {
+    margin-top: auto;
+}
+
+.card__titulo {
+    margin-bottom: 15px;
+
+    color: #1f2937;
+
+    font-size: 20px;
+
+    text-align: center;
+}
+
+.card__info {
+    margin-bottom: 10px;
+}
+
+.card__estado {
+    margin-bottom: 10px;
+
+    font-weight: bold;
+}
+
+.card__estado--abierta {
+    color: green;
+}
+
+.card__estado--cerrada {
+    color: red;
+}
+
+/* ========================================== */
+/* OPCIONES */
+/* ========================================== */
+
+.card__opcion {
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 5px;
+}
+
+
+.card__opcion p:first-child {
+    font-weight:600;
+}
+
+/* ========================================== */
+/* BOTONES */
+/* ========================================== */
+
+.card__acciones {
+    margin-top: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.boton {
+    border: none;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton:hover {
+    opacity: 0.9;
+}
+
+.boton--abrir {
+    background-color: green;
+    color: white;
+}
+
+.boton--cerrar {
+    background-color: crimson;
+    color: white;
+}
+
+.boton--destacar {
+    background-color: orange;
+    color: white;
+}
+
+.boton--detalle {
+    background-color: steelblue;
+    color: white;
+}
+
+.boton--apostar {
+    background-color: rgb(81, 221, 81);
+    color: white;
+}
+
+/* ========================================== */
+/* MENSAJE ERROR */
+/* ========================================== */
+
+.mensaje-error {
+    background-color: #ffdddd;
+
+    border: 1px solid red;
+
+    color: red;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+}
+
+.mensaje-error--oculto {
+    display: none;
+}
+
+/* ========================================== */
+/* FOOTER */
+/* ========================================== */
+
+.footer {
+    background-color: #1f2937;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+.footer__texto {
+    font-size: 14px;
+}
+
+/* ========================================== */
+/* RESPONSIVE */
+/* ========================================== */
+
+@media (max-width: 768px) {
+
+    .apuestas {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}
+
+.card--destacada {
+
+    border-left: 4px solid orange;
+    background-color: #fff8e6;
+
+}
+
+.card--cerrada {
+
+    border-left: 4px solid #c0392b;
+    background-color: #fdedec;
+
+}
+
