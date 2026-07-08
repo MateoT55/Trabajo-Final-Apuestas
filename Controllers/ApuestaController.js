@@ -1,13 +1,10 @@
-// ==========================================
-// IMPORTACIONES
-// ==========================================
-
 const Apuesta = require("../Models/Apuesta");
 
-// ==========================================
+
+
+
 // OBTENER TODAS LAS APUESTAS
 // GET /api/apuestas
-// ==========================================
 
 async function obtenerApuestas(req, res) {
 
@@ -30,10 +27,12 @@ async function obtenerApuestas(req, res) {
 
 }
 
-// ==========================================
+
+
+
+
 // OBTENER APUESTA POR ID
 // GET /api/apuestas/:id
-// ==========================================
 
 async function obtenerApuestaPorId(req, res) {
 
@@ -67,10 +66,12 @@ async function obtenerApuestaPorId(req, res) {
 
 }
 
-// ==========================================
+
+
+
+
 // OBTENER APOSTADORES
 // GET /api/apuestas/:id/apostadores
-// ==========================================
 
 async function obtenerApostadores(req, res) {
 
@@ -96,10 +97,14 @@ async function obtenerApostadores(req, res) {
 
 }
 
-// ==========================================
+
+
+
+
+
 // CAMBIAR ESTADO
 // PUT /api/apuestas/:id/estado
-// ==========================================
+
 
 async function cambiarEstado(req, res) {
 
@@ -128,10 +133,14 @@ async function cambiarEstado(req, res) {
 
 }
 
-// ==========================================
+
+
+
+
+
 // DESTACAR APUESTA
 // PUT /api/apuestas/:id/destacar
-// ==========================================
+
 
 async function destacarApuesta(req, res) {
 
@@ -158,9 +167,9 @@ async function destacarApuesta(req, res) {
 
 }
 
-// ==========================================
-// EXPORTACIONES
-// ==========================================
+
+
+
 
 module.exports = {
 

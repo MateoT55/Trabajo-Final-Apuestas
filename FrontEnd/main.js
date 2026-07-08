@@ -1,12 +1,6 @@
-// ==========================================
-// URL API
-// ==========================================
-
 const URL_API = "http://localhost:3000/api/apuestas";
 
-// ==========================================
 // ELEMENTOS DEL DOM
-// ==========================================
 
 const contenedorApuestas =
     document.getElementById("contenedorApuestas");
@@ -14,18 +8,15 @@ const contenedorApuestas =
 const mensajeError =
     document.getElementById("mensajeError");
 
-// ==========================================
-// INICIO
-// ==========================================
 
 document.addEventListener(
     "DOMContentLoaded",
     cargarApuestas
 );
 
-// ==========================================
+
+
 // CARGAR APUESTAS
-// ==========================================
 
 async function cargarApuestas() {
 
@@ -72,9 +63,11 @@ async function cargarApuestas() {
 
 }
 
-// ==========================================
+
+
+
+
 // CREAR CARD
-// ==========================================
 
 function crearCard(apuesta) {
 
@@ -97,9 +90,10 @@ function crearCard(apuesta) {
             "card--cerrada"
         );
     }
-    // ======================================
+
+
     // TITULO
-    // ======================================
+    
 
     const titulo =
         document.createElement("h2");
@@ -109,9 +103,9 @@ function crearCard(apuesta) {
     titulo.textContent =
         apuesta.evento;
 
-    // ======================================
+
+        
     // ESTADO
-    // ======================================
 
     const estado =
         document.createElement("p");
@@ -140,9 +134,10 @@ function crearCard(apuesta) {
 
     }
 
-    // ======================================
+
+
     // FECHA EVENTO
-    // ======================================
+
 
     const fechaEvento =
         document.createElement("p");
@@ -157,9 +152,11 @@ function crearCard(apuesta) {
             apuesta.fecha_evento
         );
 
-    // ======================================
+
+        
+
     // FECHA CIERRE
-    // ======================================
+
 
     const fechaCierre =
         document.createElement("p");
@@ -174,9 +171,11 @@ function crearCard(apuesta) {
             apuesta.fecha_cierre
         );
 
-    // ======================================
+
+
+
     // OPCION A
-    // ======================================
+
 
     const opcionA =
         document.createElement("div");
@@ -206,9 +205,10 @@ function crearCard(apuesta) {
         cuotaA
     );
 
-    // ======================================
+
+
+
     // OPCION B
-    // ======================================
 
     const opcionB =
         document.createElement("div");
@@ -238,9 +238,11 @@ function crearCard(apuesta) {
         cuotaB
     );
 
-    // ======================================
+
+    
+
     // BOTONES
-    // ======================================
+
 
     const acciones =
         document.createElement("div");
@@ -249,9 +251,11 @@ function crearCard(apuesta) {
         "card__acciones"
     );
 
-    // --------------------------------------
+
+
+
     // ABRIR / CERRAR
-    // --------------------------------------
+
 
     const botonEstado =
         document.createElement("button");
@@ -287,9 +291,12 @@ function crearCard(apuesta) {
         )
     );
 
-    // --------------------------------------
+
+
+
+
     // DESTACAR
-    // --------------------------------------
+
 
     if (apuesta.estado !== "CER") {
 
@@ -314,9 +321,12 @@ function crearCard(apuesta) {
     }
 
 
-    // --------------------------------------
+
+
+
+
     // DETALLE
-    // --------------------------------------
+
 
     const botonDetalle =
         document.createElement("button");
@@ -339,9 +349,13 @@ function crearCard(apuesta) {
         }
     );
 
-    // --------------------------------------
+    
+
+
+
+
     // APOSTAR
-    // --------------------------------------
+    
 
     if (apuesta.estado !== "CER") {
 
@@ -363,9 +377,10 @@ function crearCard(apuesta) {
 
 
 
-    // ======================================
+
+
     // ARMADO CARD
-    // ======================================
+
 
     acciones.appendChild(
         botonEstado
@@ -440,9 +455,9 @@ async function cambiarEstado(id) {
 
 }
 
-// ==========================================
+
 // DESTACAR APUESTA
-// ==========================================
+
 
 async function destacarApuesta(id) {
 

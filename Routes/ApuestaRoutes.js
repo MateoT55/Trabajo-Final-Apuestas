@@ -1,6 +1,4 @@
-// ==========================================
-// IMPORTACIONES
-// ==========================================
+
 
 const express = require("express");
 
@@ -9,9 +7,9 @@ const router = express.Router();
 const apuestaController =
     require("../Controllers/ApuestaController");
 
-// ==========================================
+
+
 // RUTAS GET
-// ==========================================
 
 // Obtener todas las apuestas
 router.get(
@@ -31,9 +29,12 @@ router.get(
     apuestaController.obtenerApostadores
 );
 
-// ==========================================
+
+
+
+
+
 // RUTAS PUT
-// ==========================================
 
 // Abrir o cerrar apuesta
 router.put(
@@ -47,8 +48,6 @@ router.put(
     apuestaController.destacarApuesta
 );
 
-// ==========================================
-// EXPORTACION
-// ==========================================
+
 
 module.exports = router;

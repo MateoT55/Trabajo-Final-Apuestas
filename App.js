@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("FrontEnd"));
+app.use(express.static("FrontEnd")); // Convierte el servidor en un host de archivos estáticos.
 
 app.use("/api/apuestas", apuestaRoutes);
 

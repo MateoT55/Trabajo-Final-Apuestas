@@ -17,10 +17,10 @@ async function obtenerTodas() {
         LEFT JOIN ApuestasPersonas AP ON A.id_apuesta = AP.id_apuesta
         ORDER BY 
             CASE WHEN A.destacada = 1 THEN 0
-                 WHEN A.fecha_cierre >= GETDATE() AND A.estado != 'CER' THEN 1
-                 WHEN A.fecha_cierre < GETDATE() AND A.estado != 'CER' THEN 2
-                 ELSE 3 END,
-            A.fecha_cierre ASC
+                WHEN A.fecha_cierre >= GETDATE() AND A.estado != 'CER' THEN 1
+                WHEN A.fecha_cierre < GETDATE() AND A.estado != 'CER' THEN 2
+                ELSE 3 END,
+                A.fecha_cierre ASC
     `);
 
 
@@ -158,6 +158,9 @@ async function cambiarEstado(id) {
 
     return nuevoEstado;
 }
+
+
+
 
 // DESTACAR APUESTA
 
